@@ -22,23 +22,23 @@ class CountLabel: UILabel {
     //}
     var progressBlock: progressClosure?
 
-    func countToNumber(targetNumber: Int, duration: Float, progressBlock: (progressClosure)? = nil) {
+    func countToNumber(_ targetNumber: Int, duration: Float, progressBlock: (progressClosure)? = nil) {
         self.duration = duration
         self.targetNumber = targetNumber
         self.progressBlock = progressBlock!
         
         displayLink?.invalidate()
         displayLink = CADisplayLink.init(target: self, selector: #selector(self.updateText))
-        displayLink!.addToRunLoop(NSRunLoop.currentRunLoop(), forMode: NSRunLoopCommonModes)
+        displayLink!.add(to: RunLoop.current, forMode: RunLoopMode.commonModes)
 
         originalText = (text != nil) ? text : attributedText!.string
-        let numberInOriginalText: String = originalText!.componentsSeparatedByCharactersInSet(NSCharacterSet.decimalDigitCharacterSet().invertedSet).joinWithSeparator("")
-        originalTextFormat = originalText?.stringByReplacingOccurrencesOfString(numberInOriginalText, withString: "%.0f")
+        let numberInOriginalText: String = originalText!.components(separatedBy: CharacterSet.decimalDigits.inverted).joined(separator: "")
+        originalTextFormat = originalText?.replacingOccurrences(of: numberInOriginalText, with: "%.0f")
         
         startTime = CACurrentMediaTime()
     }
     
-    func updateText(displayLink: CADisplayLink) {
+    func updateText(_ displayLink: CADisplayLink) {
         var progress = (displayLink.timestamp - startTime!) / Double(duration!)
         
         if (displayLink.timestamp >= startTime! + Double(duration!)) {
