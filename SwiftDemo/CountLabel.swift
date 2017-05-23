@@ -43,7 +43,7 @@ class CountLabel: UILabel {
         
         if (displayLink.timestamp >= startTime! + Double(duration!)) {
             displayLink.invalidate()
-            progress = 1.0;
+            progress = 1.0
         }
         
         let newNumber = Double(originalText!)! + (Double(targetNumber!) - Double(originalText!)!) * progress

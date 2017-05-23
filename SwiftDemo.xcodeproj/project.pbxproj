@@ -7,6 +7,7 @@
 	objects = {
 
 /* Begin PBXBuildFile section */
+		B2C2A2381ECF2B3100645EAD /* SpeechRecognitionViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = B2C2A2371ECF2B3100645EAD /* SpeechRecognitionViewController.swift */; };
 		B2D3C5131D27ED2700D1F399 /* AppDelegate.swift in Sources */ = {isa = PBXBuildFile; fileRef = B2D3C5121D27ED2700D1F399 /* AppDelegate.swift */; };
 		B2D3C5151D27ED2700D1F399 /* ViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = B2D3C5141D27ED2700D1F399 /* ViewController.swift */; };
 		B2D3C5181D27ED2700D1F399 /* Main.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = B2D3C5161D27ED2700D1F399 /* Main.storyboard */; };
@@ -16,6 +17,7 @@
 /* End PBXBuildFile section */
 
 /* Begin PBXFileReference section */
+		B2C2A2371ECF2B3100645EAD /* SpeechRecognitionViewController.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = SpeechRecognitionViewController.swift; sourceTree = "<group>"; };
 		B2D3C50F1D27ED2700D1F399 /* SwiftDemo.app */ = {isa = PBXFileReference; explicitFileType = wrapper.application; includeInIndex = 0; path = SwiftDemo.app; sourceTree = BUILT_PRODUCTS_DIR; };
 		B2D3C5121D27ED2700D1F399 /* AppDelegate.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = AppDelegate.swift; sourceTree = "<group>"; };
 		B2D3C5141D27ED2700D1F399 /* ViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ViewController.swift; sourceTree = "<group>"; };
@@ -37,13 +39,6 @@
 /* End PBXFrameworksBuildPhase section */
 
 /* Begin PBXGroup section */
-		B2C730B31D2AA72D0052DC8D /* SpriteKit */ = {
-			isa = PBXGroup;
-			children = (
-			);
-			name = SpriteKit;
-			sourceTree = "<group>";
-		};
 		B2D3C5061D27ED2700D1F399 = {
 			isa = PBXGroup;
 			children = (
@@ -63,8 +58,8 @@
 		B2D3C5111D27ED2700D1F399 /* SwiftDemo */ = {
 			isa = PBXGroup;
 			children = (
-				B2C730B31D2AA72D0052DC8D /* SpriteKit */,
 				B2D3C5121D27ED2700D1F399 /* AppDelegate.swift */,
+				B2C2A2371ECF2B3100645EAD /* SpeechRecognitionViewController.swift */,
 				B2D3C5141D27ED2700D1F399 /* ViewController.swift */,
 				B2D3C5161D27ED2700D1F399 /* Main.storyboard */,
 				B2D3C5191D27ED2800D1F399 /* Assets.xcassets */,
@@ -148,6 +143,7 @@
 			isa = PBXSourcesBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
+				B2C2A2381ECF2B3100645EAD /* SpeechRecognitionViewController.swift in Sources */,
 				B2D3C5251D27EE0200D1F399 /* CountLabel.swift in Sources */,
 				B2D3C5151D27ED2700D1F399 /* ViewController.swift in Sources */,
 				B2D3C5131D27ED2700D1F399 /* AppDelegate.swift in Sources */,
@@ -265,6 +261,7 @@
 				ASSETCATALOG_COMPILER_APPICON_NAME = AppIcon;
 				DEVELOPMENT_TEAM = 4X28C7C3VS;
 				INFOPLIST_FILE = SwiftDemo/Info.plist;
+				IPHONEOS_DEPLOYMENT_TARGET = 10.0;
 				LD_RUNPATH_SEARCH_PATHS = "$(inherited) @executable_path/Frameworks";
 				PRODUCT_BUNDLE_IDENTIFIER = com.yahoo.SwiftDemo;
 				PRODUCT_NAME = "$(TARGET_NAME)";
@@ -278,6 +275,7 @@
 				ASSETCATALOG_COMPILER_APPICON_NAME = AppIcon;
 				DEVELOPMENT_TEAM = 4X28C7C3VS;
 				INFOPLIST_FILE = SwiftDemo/Info.plist;
+				IPHONEOS_DEPLOYMENT_TARGET = 10.0;
 				LD_RUNPATH_SEARCH_PATHS = "$(inherited) @executable_path/Frameworks";
 				PRODUCT_BUNDLE_IDENTIFIER = com.yahoo.SwiftDemo;
 				PRODUCT_NAME = "$(TARGET_NAME)";

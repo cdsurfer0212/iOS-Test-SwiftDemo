@@ -14,12 +14,18 @@ class ViewController: UIViewController {
     
     override func viewDidLoad() {
         super.viewDidLoad()
-        // Do any additional setup after loading the view, typically from a nib.
         
         // test count label
         countLabel.countToNumber(10000, duration: 2.0) { (countLabel, progress) in
             print(progress)
         }
+    }
+
+    override func viewDidAppear(_ animated: Bool) {
+        super.viewDidAppear(animated)
+
+        // test speech recognition
+        self.present(SpeechRecognitionViewController(), animated: true, completion: nil)
     }
 
     override func didReceiveMemoryWarning() {
