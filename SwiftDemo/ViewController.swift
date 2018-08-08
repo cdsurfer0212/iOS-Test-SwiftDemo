@@ -25,7 +25,10 @@ class ViewController: UIViewController {
         super.viewDidAppear(animated)
 
         // test speech recognition
-        self.present(SpeechRecognitionViewController(), animated: true, completion: nil)
+        //self.present(SpeechRecognitionViewController(), animated: true, completion: nil)
+        
+        // test Starscream
+        self.present(StarscreamViewController(), animated: true, completion: nil)
     }
 
     override func didReceiveMemoryWarning() {
